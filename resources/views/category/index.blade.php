@@ -4,7 +4,7 @@
 <br></br>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-    <a class="btn btn-success btn-sm" href="#"> <i class="fa fa-plus"></i> Nova Categoria</a>
+    <a class="btn btn-success btn-sm" href="{{ route('category.create') }}"> <i class="fa fa-plus"></i> Nova Categoria</a>
 </div>
 
 <table class="table table-bordered table-striped mt-4">
@@ -22,11 +22,11 @@
             <td>{{ $category->name }}</td>
 
             <td>
-                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
+                <form action="{{ route('category.destroy',$category->id) }}" method="POST">
 
-                    <a class="btn btn-info btn-sm" href="{{ route('products.show',$product->id) }}"><i class="fa-solid fa-list"></i> Show</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('category.show',$category->id) }}"><i class="fa-solid fa-list"></i> Show</a>
 
-                    <a class="btn btn-primary btn-sm" href="{{ route('products.edit',$product->id) }}"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('category.edit',$category->id) }}"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
 
                     @csrf
                     @method('DELETE')
