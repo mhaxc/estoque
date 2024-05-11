@@ -8,10 +8,10 @@
     <div class="card-body">
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary btn-sm" href="{{ route('products.index') }}"><i class="fa fa-arrow-left"></i> Voltar</a>
+            <a class="btn btn-primary btn-sm" href="{{ route('category.index') }}"><i class="fa fa-arrow-left"></i> Voltar</a>
         </div>
 
-        <form action="{{ route('products.store') }}" method="POST">
+        <form action="{{ route('category.store') }}" method="POST">
             @csrf
 
             <div class="mb-3">
@@ -23,7 +23,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Submit</button>
+            <button type="submit" class="btn btn-success"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
         </form>
 
 

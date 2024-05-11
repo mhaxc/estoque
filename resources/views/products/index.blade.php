@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="card mt-5">
-  <h2 class="card-header">Laravel</h2>
-  <div class="card-body">
+    <div class="card mt-5">
+    <h2 class="card-header">Laravel</h2>
+    <div class="card-body">
 
         @session('session')
             <div class="alert alert-success" role="alert"> {{ $value }} </div>
@@ -55,6 +55,6 @@
 
         {!! $products->links() !!}
 
-  </div>
-</div>
+        </div>
+    </div>
 @endsection
