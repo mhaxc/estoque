@@ -1,20 +1,24 @@
 @extends('layouts.layout')
 
+
 @section('content')
 <br></br>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
     <a class="btn btn-success btn-sm" href="{{ route('category.create') }}"> <i class="fa fa-plus"></i> Nova Categoria</a>
+    <i class="bi bi-backspace-reverse"></i>
 </div>
+
 
 <table class="table table-bordered table-striped mt-4">
     <thead>
         <tr>
             <th width="80px">ID</th>
             <th>NOME</th>
-            <th width="300px">Açao</th>
+            <th width="300px">AÇAO</th>
         </tr>
     </thead>
+
     <tbody>
         @forelse ($categories as $category)
         <tr>
