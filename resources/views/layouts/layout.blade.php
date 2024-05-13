@@ -8,65 +8,35 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-    <style>
-        .modal {
-            width: 300px;
-        }
-
-        .modal-content {
-            width: 300px;
-        }
-
-        .list-group-item:hover {
-            background-color: rgba(59, 57, 57, 0.164) !important;
-        }
-    </style>
 </head>
 
-
 <body>
-    <nav class=" navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">DASHBOARD</span>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        </div>
-    </nav>
-
-    <div class="modal true" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">MENU</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-
-                    <ul class="list-group list-group-flush">
-
-                        <li class="list-group-item">HOME</li>
-                        <li class="list-group-item">DOCUMENTOS</li>
-                        <li class="list-group-item">APLICATIVO</li>
-                        <li class="list-group-item">CONTATOS</li>
-                        <li class="list-group-item">SOBRE</li>
-                    </ul>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">VOLTAR</button>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    Navbar text with an inline element
+                </span>
             </div>
         </div>
-    </div>
-
-    <div class="container text-center">
-
-        <h1 class="text-uppercase">teste</h1>
-    </div>
-
-
+    </nav>
+    </nav>
     <div class="container">
 
         @yield('content')
