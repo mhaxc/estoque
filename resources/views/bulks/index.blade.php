@@ -3,7 +3,7 @@
 <br></br>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-    <a class="btn btn-success btn-sm" href="{{ route('category.create') }}"> <i class="fa fa-plus"></i> Nova Categoria</a>
+    <a class="btn btn-success btn-sm" href="{{ route('bulk.create') }}"> <i class="fa fa-plus"></i> Novo Volume</a>
     <i class="bi bi-backspace-reverse"></i>
 </div>
 
@@ -13,22 +13,27 @@
         <tr>
             <th width="80px">ID</th>
             <th>NOME</th>
+            <th>SLUG</th>
+
+
+
             <th width="300px">AÇAO</th>
         </tr>
     </thead>
 
     <tbody>
-        @forelse ($categories as $category)
+        @forelse ($bulks as $bulk)
         <tr>
-            <td>{{ $category->id }}</td>
-            <td>{{ $category->name }}</td>
+            <td>{{ $bulk->id }}</td>
+            <td>{{ $bulk->name }}</td>
+            <td>{{ $bulk->slug }}</td>
 
             <td>
-                <form action="{{ route('category.destroy',$category->id) }}" method="POST">
+                <form action="{{ route('bulk.destroy',$bulk->id) }}" method="POST">
 
-                    <a class="btn btn-info btn-sm" href="{{ route('category.show',$category->id) }}"><i class="fa-solid fa-list"></i> Show</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('bulk.show',$bulk->id) }}"><i class="fa-solid fa-list"></i> Show</a>
 
-                    <a class="btn btn-primary btn-sm" href="{{ route('category.edit',$category->id) }}"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('bulk.edit',$bulk->id) }}"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
 
                     @csrf
                     @method('DELETE')
@@ -39,13 +44,13 @@
         </tr>
         @empty
         <tr>
-            <td colspan="4">nenhuma categoria.</td>
+            <td colspan="4">nenhuma volume.</td>
         </tr>
         @endforelse
     </tbody>
 
 </table>
 
-{!! $categories->links() !!}
+{!! $bulks->links() !!}
 
 @endsection

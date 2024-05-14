@@ -7,9 +7,7 @@
     <h2 class="card-header">Nova Categoria</h2>
     <div class="card-body">
 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary btn-sm" href="{{ route('category.index') }}"><i class="fa fa-arrow-left"></i> Voltar</a>
-        </div>
+
 
         <form action="{{ route('category.store') }}" method="POST">
             @csrf

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class bulk extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['slug','name'];
 }

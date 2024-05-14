@@ -48,10 +48,12 @@
         </li>
 
         <li><a href="#!"><i class="material-icons">dashboard</i>Dashboard</a></li>
-        <li><a href="#"><i class="material-icons">playlist_add_circle</i>Produtos</a></li>
+        <li><a href="{{route('products.index')}}"><i class="material-icons">playlist_add_circle</i>Produtos</a></li>
         <li><a href="#!"><i class="material-icons">shopping_cart</i>Pedidos</a></li>
-        <li><a href="#!"><i class="material-icons">bookmarks</i>Categorias</a></li>
+        <li><a href="{{route('category.index')}}"><i class="material-icons">bookmarks</i>Categorias</a></li>
+        <li><a href="{{route('bulk.index')}}"><i class="material-icons">Book</i>Volume</a></li>
         <li><a href="#!"><i class="material-icons">peoples</i>Usuários</a></li>
+
     </ul>
 
     <div class="row container">
@@ -110,23 +112,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

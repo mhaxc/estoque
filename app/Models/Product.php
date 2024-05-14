@@ -11,6 +11,20 @@ class Product extends Model
 
     protected $fillable = [
         'name',
-        'detail',
+        'price',
+        'description',
+        'color',
+        'quantity',
+        'height',
+        'width',
+        'depth',
+        'weight',
+        'img',
+        'active',
+        'category_id',
+        'bulk_slug'
+
+
+
     ];
 }

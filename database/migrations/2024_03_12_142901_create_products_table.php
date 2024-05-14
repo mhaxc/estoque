@@ -22,12 +22,13 @@ return new class extends Migration
             $table->Double('width')->default(0);
             $table->Double('depth')->default(0);
             $table->Double('weight')->default(0);
-            $table->unsignedInteger('category_id');
+            $table->string('img')->nullable();
             $table->boolean('active')->nullable();
+            $table->unsignedInteger('category_id');
             $table->string('bulk_slug', 2);
-            $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('bulk_slug')->references('slug')->on('bulks');
+            $table->timestamps();
         });
     }
 
