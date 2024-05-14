@@ -6,7 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
-    return view('layouts.layout');
+    return view('dashboard.dashboard');
 });
 
 Route::resource('products', ProductController::class);
